@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="#" th:action="@{/ecample3/addperson]" th:object="${person}" metohd="post">
+	<p>NAME: <input type="text" th:field="*{name}" /></p>
+	<p>AGE: <input type="number" th:field="*{age}" /></p>
+	<p><input type="submit" value="Submit" /></p>
+	
+	
+	</form> 
+</body>
+</html>
