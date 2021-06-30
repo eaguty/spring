@@ -5,9 +5,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="#" th:action="@{/ecample3/addperson]" th:object="${person}" metohd="post">
+	<form action="#" th:action="@{/example3/addperson}" th:object="${person}" metohd="post">
 	<p>NAME: <input type="text" th:field="*{name}" /></p>
+	<p th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name has Errores</p>
 	<p>AGE: <input type="number" th:field="*{age}" /></p>
+	<p th:if="${#fields.hasErrors('age')}" th:errors="age">Age has Errores</p>
 	<p><input type="submit" value="Submit" /></p>
 	
 	
