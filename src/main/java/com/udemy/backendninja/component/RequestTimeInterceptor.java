@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Component("requestTimeInterceptor")
 public class RequestTimeInterceptor implements AsyncHandlerInterceptor{
-	
+
 	private static final Log LOG = LogFactory.getLog(RequestTimeInterceptor.class);
 
 	@Override
@@ -28,12 +28,12 @@ public class RequestTimeInterceptor implements AsyncHandlerInterceptor{
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
 		// TODO Auto-generated method stub
-		
+
 		long startTime = (long) request.getAttribute("startTime");
 		LOG.info("--REQUEST URL: '" + request.getRequestURL().toString()+ "' -- TOTAL TIME: "+ (System.currentTimeMillis() - startTime) + "'ms");
 		//AsyncHandlerInterceptor.super.postHandle(request, response, handler, modelAndView);
 	}
-	
-	
+
+
 
 }

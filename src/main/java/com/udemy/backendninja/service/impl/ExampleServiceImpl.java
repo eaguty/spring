@@ -14,11 +14,11 @@ import com.udemy.backendninja.service.ExampleService;
 @Service("exampleService")
 public class ExampleServiceImpl implements ExampleService{
 
-	
+
 	private static final Log LOG = LogFactory.getLog(ExampleServiceImpl.class);
 	@Override
 	public List<Person> getListPeople() {
-		
+
 		List<Person> people = new ArrayList<>();
 		people.add(new Person("juan", 23));
 		people.add(new Person("Mikel", 35));
@@ -27,7 +27,7 @@ public class ExampleServiceImpl implements ExampleService{
 		LOG.info("HELLO FROM SERVICE");
 		return people;
 	}
-	
-	
+
+
 
 }
